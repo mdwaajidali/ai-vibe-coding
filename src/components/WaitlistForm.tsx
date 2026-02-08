@@ -25,7 +25,7 @@ export default function WaitlistForm() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Something went wrong');
+        throw new Error(data.detail || 'Something went wrong');
       }
 
       setStatus('success');
